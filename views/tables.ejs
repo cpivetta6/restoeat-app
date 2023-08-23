@@ -67,6 +67,13 @@
     </div>
 
     <script type="module">
+      import { tableColor } from "./scripts/TableFunction.js";
+      var idList = <%- JSON.stringify(idList) %>;
+
+      tableColor(idList);
+    </script>
+
+    <script type="module">
       import { updateClock } from "./scripts/TableFunction.js";
       updateClock();
       setInterval(updateClock, 1000);

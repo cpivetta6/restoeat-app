@@ -12,8 +12,16 @@ export function ButtonListProcessor(buttons) {
   function editButton(buttons) {
     let foundButton = false;
 
+    console.log(buttons);
+
+    /*
+    buttons.forEach((element) => {
+      console.log(element.idname);
+    });*/
+
     for (const button of buttons) {
-      const myButton = document.getElementById(button.idName);
+      const myButton = document.getElementById(button.idname);
+      //console.log(myButton);
 
       const popupContent = `
         <div id="myModal" class="modal">
@@ -106,7 +114,7 @@ export function ButtonListProcessor(buttons) {
   function actionButton(buttons) {
     for (const button of buttons) {
       document
-        .getElementById(button.idName)
+        .getElementById(button.idname)
         .addEventListener("click", function () {
           // Get the item and value from the user or generate them dynamically
 

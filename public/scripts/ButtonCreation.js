@@ -8,6 +8,7 @@ export function buttonCreation(buttonList, orderList) {
   //name of the buttons name
   for (let l of buttonList) {
     const buttonId = l.id_name;
+
     const button = document.querySelector(`[id="${buttonId}"]`);
     if (button) {
       button.textContent = l.button_name;
@@ -25,10 +26,10 @@ export function buttonCreation(buttonList, orderList) {
       var item = {
         id: buttonList[i].id,
         name: buttonList[i].button_name,
-        idName: buttonList[i].id_name,
+        idname: buttonList[i].id_name,
         amount: 0,
         price: buttonList[i].price,
-        totalValue: 0.0,
+        totalvalue: 0.0,
       };
       Buttons.push(item);
     }

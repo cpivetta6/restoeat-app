@@ -149,7 +149,7 @@
         <img src="/pictures/logo_menu.png" alt="My Picture" />
       </a>
       <div id="tableID">
-        <h3></h3>
+        <h3>Table <%= tableId %></h3>
       </div>
     </div>
     <div class="output">
@@ -171,7 +171,35 @@
           </tr>
         </thead>
 
-        <tbody></tbody>
+        <tbody>
+          <% itemList.forEach(item1 => { %>
+
+          <script type="module">
+            import { ButtonAct } from "./scripts/ButtonFunction.js";
+            var item = {
+              id: parseInt("<%= item1.id%>"),
+              name: "<%= item1.name%>",
+              amount: parseInt("<%= item1.amount%>"),
+              price: parseFloat("<%= item1.price%>"),
+              totalValue: parseFloat("<%= item1.totalvalue%>"),
+            };
+
+            ButtonAct(item);
+          </script>
+
+          <% }) %>
+
+          <script type="module">
+            import { buttonCreation } from "./scripts/ButtonCreation.js";
+
+            var btnList = <%- JSON.stringify(btnList) %>;
+            var orderList = <%- JSON.stringify(itemList) %>;
+
+
+
+            buttonCreation(btnList, orderList);
+          </script>
+        </tbody>
 
         <tfoot></tfoot>
       </table>
