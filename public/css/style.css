@@ -1,0 +1,71 @@
+header {
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  height: 75px;
+}
+
+body {
+  background-color: #181818;
+  text-align: center;
+}
+
+#table-link a {
+  display: inline-block;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  width: 200px;
+  /* set a fixed width */
+  height: 75px;
+  /* set a fixed height */
+  overflow: hidden;
+  /* hide any overflow text */
+
+  transition: background-color 0.2s ease-in-out;
+  /* add a transition effect */
+  border-radius: 8px;
+  padding: 12px 24px;
+  border: 0;
+  color: #000021;
+  background: #1de9b6;
+  line-height: center;
+  font-size: 32px;
+
+  :hover {
+    transition: all 0.1s ease;
+    box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+  }
+}
+
+#table-link a:hover {
+  transition: all 0.1s ease;
+  box-shadow: 0 0 0 0 #fff, 0 0 0 3px #1de9b6;
+}
+
+.h4,
+h2,
+h3,
+p {
+  font-family: "JetBrains Mono", monospace;
+  font-style: italic;
+  color: white;
+  top: -100px;
+}
+
+#clock {
+  display: flex;
+  width: 100px;
+  position: absolute;
+  right: 200px;
+  top: 7px;
+}
+
+#logo img {
+  display: flex;
+  width: 250px;
+  height: 180px;
+  position: absolute;
+  left: 150px;
+  top: -50px;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Restaurant Management System</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/album/"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type="text/css"></style>
+  </head>
+
+  <header>
+    <h2>Choose Your Dining Spot</h2>
+    <div><h2 id="clock">TIMER</h2></div>
+    <p>Select the table number</p>
+    <div id="logo">
+      <a href="/tables"
+        ><img src="/pictures/logo_menu.png" alt="My Picture" />
+      </a>
+    </div>
+  </header>
+
+  <body>
+    <div class="container p-5 my-5" id="table-link">
+      <a id="1" href="tableId=1">1</a>
+      <a id="2" href="tableId=2">2</a>
+      <a id="3" href="tableId=3">3</a>
+      <a id="4" href="tableId=4">4</a>
+      <a id="5" href="tableId=5">5</a>
+      <a id="6" href="tableId=6">6</a>
+      <a id="7" href="tableId=7">7</a>
+      <a id="8" href="tableId=8">8</a>
+      <a id="9" href="tableId=9">9</a>
+      <a id="10" href="tableId=10">10</a>
+      <a id="11" href="tableId=11">11</a>
+      <a id="12" href="tableId=12">12</a>
+      <a id="13" href="tableId=13">13</a>
+      <a id="14" href="tableId=14">14</a>
+      <a id="15" href="tableId=15">15</a>
+      <a id="16" href="tableId=16">16</a>
+      <a id="17" href="tableId=17">17</a>
+      <a id="18" href="tableId=18">18</a>
+      <a id="19" href="tableId=19">19</a>
+      <a id="20" href="tableId=20">20</a>
+      <a id="21" href="tableId=21">21</a>
+      <a id="22" href="tableId=22">22</a>
+      <a id="23" href="tableId=23">23</a>
+      <a id="24" href="tableId=24">24</a>
+      <a id="25" href="tableId=25">25</a>
+      <a id="26" href="tableId=26">26</a>
+      <a id="27" href="tableId=27">27</a>
+      <a id="28" href="tableId=28">28</a>
+      <a id="29" href="tableId=29">29</a>
+      <a id="30" href="tableId=30">30</a>
+    </div>
+
+    <script type="module">
+      import { tableColor } from "./scripts/TableFunction.js";
+      var idList = <%- JSON.stringify(idList) %>;
+
+      tableColor(idList);
+    </script>
+
+    <script type="module">
+      import { updateClock } from "./scripts/TableFunction.js";
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+
+    <!--<script src="/scripts/ButtonStack.js" type="module"></script>-->
+
+    <script src="/scripts/TableFunction.js" type="module"></script>
+  </body>
+</html>
