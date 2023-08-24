@@ -49,7 +49,7 @@ export function ButtonListProcessor(buttons) {
         popupContainer.style.display = "block";
 
         const clickedButtonId = event.target.id;
-        if (clickedButtonId === button.idName) {
+        if (clickedButtonId === button.idname) {
           foundButton = true;
         }
 
