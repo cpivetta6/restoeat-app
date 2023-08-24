@@ -12,35 +12,34 @@ export function ButtonListProcessor(buttons) {
   function editButton(buttons) {
     let foundButton = false;
 
-    //console.log(buttons);
-
-    /*
-    buttons.forEach((element) => {
-      console.log(element.idname);
-    });*/
-
     for (const button of buttons) {
-      const myButton = document.getElementById(button.idname);
-      //console.log(myButton);
+      const myButton = document.getElementById(button.idName);
 
       const popupContent = `
-        <div id="myModal" class="modal">
-          <div class="modal-content">
-          <div><h2>Edit Button</h2></div>
-            <div class="close">&times;</div>
-            <form id= "saveForm">
-              <div>
-                <label for="name">Name:</label>
-                <input type="text" id="nameInput" name="name" required>
-              </div>
-              <div>
-                <label for="price">Price:</label>
-                <input type="number" id="priceInput" name="price" required>
-              </div>
-              <button id = "submitBtn">Submit</button>
-            </form>
+      <div id="myModal" class="modal">
+      
+      <div class="modal-content">
+
+        <div class="modal-header">
+           <h2>Edit Button</h2>
+             </div>
+
+        <form id= "saveForm">
+          <div>
+            <label for="nameInput">Name:</label>
+            <input type="text" id="nameInput" name="name" required>
           </div>
-        </div>`;
+          <div>
+            <label for="priceInput">Price:</label>
+            <input type="number" id="priceInput" name="price" required>
+          </div>
+          <div class = modal-btn>
+          <button id = "submitBtn">Submit</button>
+          <button class="close">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>`;
 
       myButton.addEventListener("contextmenu", function (event) {
         event.preventDefault();
@@ -49,7 +48,7 @@ export function ButtonListProcessor(buttons) {
         popupContainer.style.display = "block";
 
         const clickedButtonId = event.target.id;
-        if (clickedButtonId === button.idname) {
+        if (clickedButtonId === button.idName) {
           foundButton = true;
         }
 
@@ -114,7 +113,7 @@ export function ButtonListProcessor(buttons) {
   function actionButton(buttons) {
     for (const button of buttons) {
       document
-        .getElementById(button.idname)
+        .getElementById(button.idName)
         .addEventListener("click", function () {
           // Get the item and value from the user or generate them dynamically
 
