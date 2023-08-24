@@ -14,7 +14,7 @@ async function saveItemToDatabase(data) {
   const button = data[1];
   const operation = data[2];
 
-  console.log(operation);
+  //console.log(operation);
 
   switch (operation) {
     case "insertOrderItems":
@@ -294,7 +294,6 @@ async function query_insertOrderItem(table, button) {
       throw error; // Rethrow the error for error handling in the calling code
     }
   } else {
-    console.log("counter > 0");
   }
 }
 

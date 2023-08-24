@@ -81,7 +81,6 @@ export async function ButtonAct(item) {
     newRow.setAttribute("id", item.id);
 
     newRow.addEventListener("click", function () {
-      console.log("decrease");
       // Get the value and price cells within the clicked row
       var amountCell = newRow.querySelector(".itemAmount");
       var pCell = newRow.querySelector(".itemPrice");

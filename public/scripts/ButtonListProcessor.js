@@ -12,7 +12,7 @@ export function ButtonListProcessor(buttons) {
   function editButton(buttons) {
     let foundButton = false;
 
-    console.log(buttons);
+    //console.log(buttons);
 
     /*
     buttons.forEach((element) => {
