@@ -13,7 +13,7 @@ export function ButtonListProcessor(buttons) {
     let foundButton = false;
 
     for (const button of buttons) {
-      const myButton = document.getElementById(button.idName);
+      const myButton = document.getElementById(button.idname);
 
       const popupContent = `
       <div id="myModal" class="modal">
@@ -27,13 +27,13 @@ export function ButtonListProcessor(buttons) {
         <form id= "saveForm">
           <div>
             <label for="nameInput">Name:</label>
-            <input type="text" id="nameInput" name="name" required>
+            <input type="text" id="nameInput" name="name" >
           </div>
           <div>
             <label for="priceInput">Price:</label>
-            <input type="number" id="priceInput" name="price" required>
+            <input type="number" id="priceInput" name="price" >
           </div>
-          <div class = modal-btn>
+          <div class = "modal-btn">
           <button id = "submitBtn">Submit</button>
           <button class="close">Cancel</button>
           </div>
@@ -48,7 +48,7 @@ export function ButtonListProcessor(buttons) {
         popupContainer.style.display = "block";
 
         const clickedButtonId = event.target.id;
-        if (clickedButtonId === button.idName) {
+        if (clickedButtonId === button.idname) {
           foundButton = true;
         }
 
@@ -113,7 +113,7 @@ export function ButtonListProcessor(buttons) {
   function actionButton(buttons) {
     for (const button of buttons) {
       document
-        .getElementById(button.idName)
+        .getElementById(button.idname)
         .addEventListener("click", function () {
           // Get the item and value from the user or generate them dynamically
 

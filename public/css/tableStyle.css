@@ -348,3 +348,120 @@ h2 {
 .close:hover {
   color: #f00;
 }
+
+.payment-header {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#cancelButton {
+  background-color: red;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.confirmationPopup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+
+.payment-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+}
+
+.outer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%; /* Make outer-container fill the entire viewport height */
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.centered-container {
+  position: absolute;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.invoice {
+  position: absolute;
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: white;
+  left: 600px;
+  top: 200px;
+}
+
+.invoice-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.invoice-header h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.invoice table {
+  font-size: 12px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoice table th {
+  padding-left: 35px;
+}
+
+td.quantity {
+  text-align: center;
+}
+
+td.price {
+  text-align: right;
+}
+
+.invoice table th.item {
+  text-align: left;
+  padding-right: 30px;
+}
+
+.invoice table tfoot {
+  height: 50px;
+}
+
+.invoice tbody tr:last-child td {
+  border-bottom: none; /* Remove bottom border from the last row */
+}
+
+td.total {
+  text-align: left;
+  font-weight: bold;
+}
+
+td.total-value {
+  text-align: right;
+}
