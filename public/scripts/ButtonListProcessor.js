@@ -35,7 +35,7 @@ export function ButtonListProcessor(buttons) {
           </div>
           <div class = "modal-btn">
           <button id = "submitBtn">Submit</button>
-          <button class="close">Cancel</button>
+          <button id = "closeBtn">Cancel</button>
           </div>
         </form>
       </div>
@@ -55,6 +55,7 @@ export function ButtonListProcessor(buttons) {
         const nameInput = document.getElementById("nameInput");
         const priceInput = document.getElementById("priceInput");
         const submitBtn = document.getElementById("submitBtn");
+        const closeBtn = document.getElementById("closeBtn");
 
         submitBtn.addEventListener("click", function (event) {
           event.preventDefault();
@@ -95,15 +96,14 @@ export function ButtonListProcessor(buttons) {
           popupContainer.style.display = "none";
         });
 
-        const closeBtn = document.querySelector(".close");
-        closeBtn.addEventListener("click", function () {
+        closeBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          const popupContainer = document.getElementById("popupContainer");
           popupContainer.style.display = "none";
         });
       });
 
       if (foundButton) {
-        //event ajax
-
         break; // Break out of the outer loop
       }
     }
