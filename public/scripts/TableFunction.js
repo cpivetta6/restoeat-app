@@ -124,6 +124,7 @@ export function paymentPopUp() {
          
         </table>
         <button id="printButton">Print Invoice</button>
+        <button id="cancelButton">Cancel</button>
       </div>
       </div>
       </div>
@@ -135,21 +136,24 @@ export function paymentPopUp() {
       confirmationPopup.style.display = "none";
 
       const printButton = document.getElementById("printButton");
-      printButton.addEventListener("click", function () {
-        document.querySelector(".print-invoice").style.display = "none";
-        document.querySelector(".invoice").style.display = "block";
+      printButton.addEventListener("click", function (e) {
+        e.preventDefault();
 
-        // Print the div
-        window.print();
+        const confirmationPopup = document.getElementById("popupContainer");
+        confirmationPopup.style.display = "none";
+      });
 
-        // Show other elements again after printing
-        // document.body.classList.add("print-invoice");
-        document.querySelector(".print-invoice").style.display = "block";
-        document.querySelector(".invoice").style.display = "none";
+      const cancelButton = document.getElementById("cancelButton");
+      cancelButton.addEventListener("click", function () {
+        console.log("cancel");
+        e.preventDefault();
+        const confirmationPopup = document.getElementById("popupContainer");
+        confirmationPopup.style.display = "none";
       });
     });
 
-    cancelButton.addEventListener("click", function () {
+    cancelButton.addEventListener("click", function (e) {
+      e.preventDefault();
       // Hide the confirmation pop-up
       confirmationPopup.style.display = "none";
     });

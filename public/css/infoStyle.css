@@ -1,0 +1,74 @@
+/* styles.css */
+#information-icon {
+  width: 40px;
+  height: 40px;
+  filter: invert(100%) sepia(6%) saturate(22%) hue-rotate(133deg)
+    brightness(105%) contrast(108%);
+}
+
+.information-container button {
+  position: relative;
+  background-color: #181818;
+  left: 650px;
+  appearance: none;
+  border-radius: 25px;
+}
+
+.container {
+  position: absolute;
+  left: 30%;
+  top: 30%;
+  width: 600px;
+  height: 300px;
+  background-color: black;
+  color: white;
+  justify-content: right;
+  padding: 0;
+  font-size: 18px;
+  white-space: pre-wrap;
+}
+
+.container p {
+  line-height: 1.5; /* Adjust this value to control spacing */
+  margin: 0;
+}
+
+.text-info {
+  display: flex;
+  position: relative;
+
+  flex-direction: column;
+  top: -90px;
+}
+
+.container-header {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: grey;
+  color: black;
+  top: -40px;
+}
+
+#close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  font-size: 35px;
+  cursor: default;
+  width: 55px;
+  height: 40px;
+  top: 0;
+  right: 0;
+}
+
+#close:hover {
+  position: absolute;
+  font-size: 35px;
+  background-color: red;
+  width: 55px;
+  height: 40px;
+  top: 0;
+  right: 0;
+}

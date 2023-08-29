@@ -5,7 +5,7 @@ const connectionString =
   "postgres://postgresql_test2_5avf_user:jp6koVgNcnRyiERCMwuCGT4KOwAsZOK3@dpg-cjc9fubbq8nc739b5stg-a.frankfurt-postgres.render.com/postgresql_test2_5avf";
 
 const pool = new Pool({
-  connectionString: databaseUrl,
+  connectionString: connectionString,
   ssl: { rejectUnauthorized: false },
 });
 
