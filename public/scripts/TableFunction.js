@@ -46,8 +46,6 @@ export function paymentPopUp() {
     </div>
   `;
 
-  const orderList = [];
-
   myButton.addEventListener("click", function (event) {
     event.preventDefault();
     const confirmationPopup = document.getElementById("confirmationPopup");
@@ -56,11 +54,11 @@ export function paymentPopUp() {
     confirmationPopup.style.display = "block";
 
     const confirmButton = document.getElementById("confirmButton");
-    const cancelButton = document.getElementById("cancelButton");
 
     confirmButton.addEventListener("click", function (event) {
       event.preventDefault();
 
+      const orderList = [];
       const rows = document.querySelectorAll("#myTable tbody tr");
       if (rows) {
         for (let r of rows) {
@@ -74,7 +72,7 @@ export function paymentPopUp() {
         }
       }
 
-      const orderListString = orderList
+      let orderListString = orderList
         .map((item) => {
           return `
           <tr>
@@ -101,8 +99,8 @@ export function paymentPopUp() {
 
       const printBill = `
      
-      <div class="outer-container">
-      <div class="cetered-container">
+    
+    
       <div class="invoice">
         <div class="invoice-header">
           <h2>Restaurant Invoice</h2>
@@ -123,38 +121,42 @@ export function paymentPopUp() {
           </tbody> 
          
         </table>
-        <button id="printButton">Print Invoice</button>
-        <button id="cancelButton">Cancel</button>
+        <div class="popup-buttons"> 
+        <button id="printButton">Print</button>
+        <button id="cancelPrint">Cancel</button>
+        </div>
       </div>
-      </div>
-      </div>
+     
+     
     
     `;
 
       listPopUp.innerHTML = printBill;
       listPopUp.style.display = "block";
       confirmationPopup.style.display = "none";
-
+      /*
       const printButton = document.getElementById("printButton");
       printButton.addEventListener("click", function (e) {
         e.preventDefault();
 
         const confirmationPopup = document.getElementById("popupContainer");
         confirmationPopup.style.display = "none";
-      });
+      });*/
 
-      const cancelButton = document.getElementById("cancelButton");
-      cancelButton.addEventListener("click", function () {
-        console.log("cancel");
+      const cancelPrint = document.getElementById("cancelPrint");
+      cancelPrint.addEventListener("click", function (e) {
         e.preventDefault();
-        const confirmationPopup = document.getElementById("popupContainer");
-        confirmationPopup.style.display = "none";
+
+        const listPopUp = document.getElementById("listPopUp");
+        listPopUp.style.display = "none";
       });
     });
 
+    const cancelButton = document.getElementById("cancelButton");
     cancelButton.addEventListener("click", function (e) {
       e.preventDefault();
-      // Hide the confirmation pop-up
+
+      const confirmationPopup = document.getElementById("confirmationPopup");
       confirmationPopup.style.display = "none";
     });
   });
